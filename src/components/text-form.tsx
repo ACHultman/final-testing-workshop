@@ -11,10 +11,15 @@ export const TextForm = ({
 }: questionProps) => {
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} data-testid="form">
         <label>
           <div>
-            <input type="text" value={text} onChange={handleChange} />
+            <input
+              data-testid="text-input"
+              type="text"
+              value={text}
+              onChange={handleChange}
+            />
           </div>
         </label>
         <input type="submit" value="Submit" />
